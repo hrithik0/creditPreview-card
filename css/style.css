@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+.left * p {
+  color: hsl(0, 0%, 100%);
+}
+
+.left {
+  position: relative;
+  float: left;
+  width: 30vw;
+  height: 100vh;
+}
+
+.left>img {
+  width: 100%;
+  height: 100%;
+}
+
+.cards {
+  position: absolute;
+  top: 110px;
+  left: 35%;
+  z-index: 3;
+}
+
+.cards .front {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  /* border: 2px solid green; */
+}
+
+.front img {
+  border-radius: 10px;
+  box-shadow: 30px 10px 145px rgba(194, 194, 194, 0.6);
+}
+
+.cards #bubble {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* border: 1px solid yellow; */
+  width: 100%;
+  height: 100%;
+  padding: 10px 30px 5px 30px;
+}
+
+.cards .back {
+  position: relative;
+  top: 30px;
+  left: 90px;
+}
+
+.cards .cvv {
+  position: absolute;
+  top: 42.5%;
+  left: 78%;
+  width: fit-content;
+  height: fit-content;
+  /* border: 1px solid yellow; */
+  font-size: 1.5em;
+}
+
+.cards section {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid hsl(0, 0%, 100%);
+  margin-bottom: 16%;
+}
+
+.cards #big {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: hsl(0, 0%, 100%);
+  border: none;
+  margin-top: 10px;
+}
+
+.cards #small {
+  position: absolute;
+  top: 25px;
+  left: 80px;
+}
+
+.front p {
+  width: 100%;
+  font-size: 1.2em;
+  display: inline;
+}
+
+.front p[id='number'] {
+  width: 100%;
+  letter-spacing: 2px;
+  text-align: left;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.8em;
+  font-weight: 300;
+  display: block;
+}
+
+.front p[id='name'],
+.front p[id='expiry'] {
+  width: fit-content;
+  position: relative;
+  top: 30px;
+  font-size: 0.8em;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.front p[id='expiry'] {
+  float: right;
+  right: 10px;
+}
+
+
+
+.fill {
+  float: left;
+  width: 70%;
+  height: 100vh;
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.input-container * p {
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.input-container {
+  position: relative;
+  /* outline: 2px solid green; */
+  /* top: -30px; */
+  left: 70px;
+  width: 40%;
+  height: fit-content;
+  z-index: 0;
+}
+
+.submit {
+  clear: both;
+  /* outline: 1px solid green; */
+}
+
+input {
+  outline: none;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  /* border: 1px solid black; */
+  text-align: start;
+  margin-bottom: 1.5em;
+  box-shadow: 1px 1px 3px rgb(146, 144, 144);
+  font-size: 1.2em;
+}
+
+::placeholder {
+  color: hsla(0, 0%, 87%, 0.811);
+}
+
+#username,
+#card-num {
+  width: 100%;
+}
+
+section.date {
+  float: left;
+  width: 50%;
+  /* outline: 1px solid red; */
+}
+
+#mm,
+#yy {
+  margin: 0;
+  width: 48%;
+}
+
+section.sec {
+  float: left;
+  width: 50%;
+  padding-left: 4%;
+  /* outline: 1px solid green; */
+}
+
+#cvc {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+button {
+  width: 100%;
+  margin-top: 3em;
+  height: 2.9rem;
+  border-radius: 9px;
+  border: none;
+  text-align: center;
+  font-size: 1.2em;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(278, 68%, 11%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button:hover {
+  background-color: hsla(278, 68%, 11%, 0.8);
+}
+
+input:focus {
+  border: 1px solid hsl(278, 94%, 30%);
+  cursor: pointer;
+}
+
+/* input:focus{
+  border: 1px solid hsl(0, 100%, 66%);
+} */
+.greet {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.greet h1 {
+  text-transform: uppercase;
+  padding-bottom: 0.8em;
+}
+
+.greet p {
+  color: hsl(0, 0%, 58%);
+}
+
+.success {
+  margin: auto;
+  margin-bottom: 20px;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(180deg, hsl(270, 97%, 48%), hsl(279, 46%, 43%));
+  box-shadow: 1px 2px 5px hsl(0, 0%, 58%);
+  animation: arrow 700ms ease-in-out 1 alternate forwards;
+}
+
+.success span {
+  width: 27px;
+  height: 5px;
+  background-color: hsl(0, 0%, 100%);
+  opacity: 0.0;
+}
+
+.success #up {
+  width: 14px;
+  position: fixed;
+  border-right: none;
+  transform: translate(-13.6px, 1px) rotate(50deg);
+
+}
+
+.success #down {
+  transform: translate(1px, 0px) rotate(-41deg);
+}
+
+.success #up,
+.success #down {
+  animation: ar 700ms ease-in 500ms normal forwards;
+}
+
+@keyframes ar {
+  0% {
+    opacity: 0.99;
+    scale: 0.4;
+  }
+
+  70% {
+    opacity: 1.0;
+    scale: 1.3
+  }
+
+  100% {
+    opacity: 1.0;
+    scale: 1.1;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    scale: 0.0;
+  }
+
+  70% {
+    scale: 1.4
+  }
+
+  100% {
+    scale: 1.1;
+  }
+}
+
+.attribution {
+  position: absolute;
+  padding-top: 30px;
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 600px){
+  body{
+    /* overflow: auto; */
+    overflow-x: hidden;
+  }
+  .left {
+    position: relative;
+    width: 100vw;
+    height: 40vh;
+  }
+  .cards{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* outline: 1px solid green; */
+    width: 100%;
+    height: 100%;
+  }
+  .cards .back{
+    position: absolute;
+    width: 70vw;
+    height: fit-content;
+    top: 30px;
+    left: 100px;
+
+  } 
+  .cards .front{
+    position: absolute;
+    width: 70vw;
+    z-index: 1;
+    top: 139px;
+    left: 30px;
+  }
+  .cards .back img, .cards .front img{
+    width: 100%;
+    height: 100%;
+  }
+  .front p[id='number'] {
+    width: 100%;
+    /* outline: 1px solid red; */
+    letter-spacing: 2px;
+    text-align: left;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.4em;
+  }
+  .cards section {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid hsla(0, 0%, 100%, 0.775);
+    margin-bottom: 16%;
+  }
+  .cards #big {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+    margin-top: 10px;
+  }
+  
+  .cards #small {
+    position: absolute;
+    top: 25px;
+    left: 76px;
+  }
+  .fill {
+    float: none;
+    width: 100vw;
+    height: 60vh;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+  }
+  .input-container {
+    position: relative;
+    /* outline: 2px solid green; */
+    /* top: -30px; */
+    left: 0;
+    width: 96%;
+    padding: 8%;
+    padding-top: 4%;
+    height: 70%;
+  }
+  .front p[id='name'],
+.front p[id='expiry'] {
+  float: left;
+  width: fit-content;
+  top: 30px;
+  font-size: 0.6em;
+  letter-spacing: 2px;
+}
+.front p[id='expiry']{
+  float: right;
+  left: 1em;
+}
+.cards .cvv {
+  position: absolute;
+  top: 42.5%;
+  left: 78%;
+  width: fit-content;
+  height: fit-content;
+  /* border: 1px solid yellow; */
+  font-size: 1em;
+}
+input{
+  top: 0;
+  margin: 0;
+}
+section.date {
+  display: inline-block;
+  width: 45%;
+  /* float: left; */
+  /* outline: 1px solid red; */
+  margin-right: 1%;
+}
+section p{
+  font-size: 0.8em;
+  letter-spacing: 2px;
+}
+
+section.sec {
+  /* float: left; */
+  display: inline-block;
+  width: 52.7%;
+  /* outline: 2px solid green; */
+  padding: 0;
+}
+#cvc {
+  width: 100%;
+  margin-bottom: 0;
+}
+button{
+  margin: 0;
+  margin-top: 4vh;
+}
+input{
+  margin-bottom: 2.6vh;
+}
+.attribution{
+  position: relative;
+  margin: 0;
+  padding: 2vh;
+}
+}
